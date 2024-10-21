@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Skyline Customs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body {
+            background-color: #121212;
+            color: #f5f5f5;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding-top: 80px; /* Space for fixed navbar */
+        }
+
+        /* Navbar */
+        nav {
+            background-color: #1c1c1c;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            padding: 0 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .brand-logo {
+            color: #ffeb3b;
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-right: auto; /* Pushes nav items to the right */
+        }
+
+        .nav-wrapper {
+            display: flex;
+            width: 100%;
+            align-items: center;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            margin-left: auto; /* Pushes ul to the right */
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #f5f5f5;
+            font-size: 16px;
+            font-weight: 500;
+            text-transform: uppercase;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #ffeb3b;
+            color: #121212;
+        }
+
+        /* Content Styles */
+        .container {
+            padding: 20px;
+            text-align: left;
+        }
+
+        .container h1 {
+            margin-bottom: 1rem;
+        }
+
+        .container h2 {
+            color: #ffeb3b; /* Gold color for topic names */
+            font-size: 1.8rem; /* Smaller size for topic names */
+        }
+
+        footer {
+            background-color: #121212;
+            color: #f5f5f5;
+            padding: 2rem 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            padding: 0 2rem;
+        }
+
+        .footer-logo-info {
+            text-align: left;
+            flex: 1;
+        }
+
+        .footer-logo {
+            max-width: 150px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: space-around;
+            flex: 2;
+        }
+
+        .footer-column h5 {
+            color: #ffeb3b;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column ul li {
+            margin: 0.25rem 0;
+        }
+
+        .footer-column ul li a {
+            color: #f5f5f5;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: #ffeb3b;
+        }
+
+        .footer-payment-methods {
+            text-align: right;
+            flex: 1;
+        }
+
+        .payment-methods-img {
+            max-width: 400px;
+            height: auto;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .footer-links {
+                margin-top: 1rem;
+            }
+
+            .footer-payment-methods {
+                margin-top: 1rem;
+            }
+
+            .payment-methods-img {
+                max-width: 400px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                height: 60px;
+            }
+
+            footer p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="nav-wrapper">
+            <a href="index.html" class="brand-logo">Skyline Customs</a>
+            <ul id="nav-mobile" class="hide-on-med-and-down">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="shop.html">SHOP</a></li>
+                <li><a href="pricing.html">PRICING</a></li>
+            </ul>
+            <a href="#" data-target="mobile-nav" class="sidenav-trigger show-on-medium-and-down"><i class="material-icons">menu</i></a>
+            <ul class="sidenav" id="mobile-nav">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="shop.html">SHOP</a></li>
+                <li><a href="pricing.html">PRICING</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Privacy Policy</h1>
+        <h2>Introduction</h2>
+        <p>
+            Welcome to Skyline Customs. We take your privacy seriously and are committed to protecting your personal information. This privacy policy explains how we collect, use, and safeguard your information when you visit our website.
+        </p>
+        
+        <h2>Information We Collect</h2>
+        <p>
+            We collect information that you provide directly to us, such as your name, email address, and any other information you choose to provide. We also collect information automatically when you use our website, such as your IP address, browser type, and usage data.
+        </p>
+        
+        <h2>How We Use Your Information</h2>
+        <p>
+            We use the information we collect to:
+            <ul>
+                <li>Provide and improve our services</li>
+                <li>Communicate with you, including sending updates and promotional materials</li>
+                <li>Analyze usage and trends to enhance user experience</li>
+                <li>Protect against and prevent fraud and other illegal activities</li>
+            </ul>
+        </p>
+        
+        <h2>How We Share Your Information</h2>
+        <p>
+            We may share your information with third-party service providers who assist us in operating our website and providing our services. We may also share your information if required by law or in connection with a business transfer.
+        </p>
+        
+        <h2>Your Choices</h2>
+        <p>
+            You can update or delete your personal information by contacting us directly. You may also opt-out of receiving promotional communications by following the instructions in those communications.
+        </p>
+        
+        <h2>Security</h2>
+        <p>
+            We implement reasonable security measures to protect your information from unauthorized access, use, or disclosure. However, no system can be completely secure, and we cannot guarantee the absolute security of your information.
+        </p>
+        
+        <h2>Changes to This Policy</h2>
+        <p>
+            We may update this privacy policy from time to time. Any changes will be posted on this page, and we encourage you to review it periodically.
+        </p>
+        
+        <h2>Contact Us</h2>
+        <p>
+            If you have any questions or concerns about this privacy policy, please contact us at <a href="mailto:info@skylinecustoms.com">info@skylinecustoms.com</a>.
+        </p>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <!-- Logo and Branding -->
+            <div class="footer-logo-info">
+                <img src="https://cdn.discordapp.com/attachments/1260618082406109301/1286120315239399444/Untitled_design_8.png?ex=66ecc062&is=66eb6ee2&hm=5c194cb1aa3aeae8da9532557c228885c8c78f092bf64ed805c38d870423e040&" alt="Skyline Customs Logo" class="footer-logo">
+                <p>Skyline Customs</p>
+            </div>
+    
+            <!-- Links Section -->
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h5>Main Info</h5>
+                    <ul>
+                        <li><a href="#">Features</a></li>
+                    </ul>
+                </div>
+    
+                <div class="footer-column">
+                    <h5>Support</h5>
+                    <ul>
+                        <li><a href="https://discord.gg/vnWbEZbVR5 ">Discord</a></li>
+                    </ul>
+                </div>
+    
+                <div class="footer-column">
+                    <h5>Legal</h5>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="tos.html">Terms of Service</a></li>
+                    </ul>
+                </div> 
+            </div>
+    
+            <!-- Payment Methods (Single Image) -->
+            <div class="footer-payment-methods">
+                <img src="https://cdn.discordapp.com/attachments/1260618082695647363/1284601129237479514/3.png?ex=66ec7f87&is=66eb2e07&hm=3a6b442453ef62c97157971ca0de8434a8c33fd66d3e1274bd9112e62f86fb3a&" alt="Payment Methods" class="payment-methods-img">
+            </div>
+        </div>
+    
+        <!-- Copyright -->
+        <p>&copy; 2024 Skyline Customs. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.sidenav');
+            M.Sidenav.init(elems, {});
+        });
+    </script>
+</body>
+</html>
