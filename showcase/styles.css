@@ -242,24 +242,9 @@ body {
 }
 
 .showcase-item img {
-  width: 30%;
-  height: 30%;
+  width: 40%;
+  height: 40%;
   border-radius: 15px;
-}
-
-.showcase-item .showcase-info {
-  position: absolute;
-  bottom: 0;
-  left: 50%; /* Horizontally center the info box */
-  width: 0%; /* Adjust the width as needed */
-  height: 0%;
-  padding: 1rem;
-  background: rgba(0, 0, 0, 0.8);
-  color: #ffffff;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.3s, transform 0.3s; /* Add transform for smooth animation */
-  transform: translateX(-50%); /* Correctly center the box */
 }
 
 
