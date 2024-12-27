@@ -242,15 +242,11 @@ body {
 }
 
 .showcase-item img {
-  width: 40%;
-  height: 40%;
+  width: 50%;
+  height: 50%;
   border-radius: 15px;
 }
 
-
-.showcase-item:hover .showcase-info {
-  opacity: 1;
-}
 
 .showcase-item:hover {
   transform: scale(1.05);
