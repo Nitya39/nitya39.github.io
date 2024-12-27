@@ -251,8 +251,8 @@ body {
   position: absolute;
   bottom: 0;
   left: 50%; /* Horizontally center the info box */
-  width: 40%; /* Adjust the width as needed */
-  height: 10%;
+  width: 0%; /* Adjust the width as needed */
+  height: 0%;
   padding: 1rem;
   background: rgba(0, 0, 0, 0.8);
   color: #ffffff;
