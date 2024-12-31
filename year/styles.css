@@ -1,108 +1,105 @@
-/* General Styles */
+/* General Reset */
 body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-  }
-  
-  /* Snowfall Effect */
-  #snow {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    overflow: hidden;
-    z-index: 9999;
-  }
-  
-  .snowflake {
-    position: absolute;
-    top: -10px;
-    background-color: #ffffff;
-    border-radius: 50%;
-    opacity: 0.9;
-    pointer-events: none;
-    animation: fall linear infinite;
-  }
-  
-  @keyframes fall {
-    0% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(100vh);
-      opacity: 0;
-    }
-  }
-  
-  /* Countdown Styles */
-  .countdown {
-    margin-top: 20vh;
-    font-size: 3rem;
-    font-weight: 700;
-  }
-  
-  .countdown span {
-    padding: 20px;
-    background-color: #333;
-    border-radius: 10px;
-    margin: 5px;
-    font-size: 2.5rem;
-  }
-  
-  /* Celebration Popup */
-  .celebration-popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    display: none;
-    z-index: 10000;
-  }
-  
-  .celebration-popup h1 {
-    color: #ffdf00;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
-  
-  .celebration-popup button {
-    padding: 10px 20px;
-    background-color: #ffdf00;
-    color: #000;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    cursor: pointer;
-  }
-  
-  .celebration-popup button:hover {
-    background-color: #ffcc00;
-  }
-  
-  /* Navbar */
-  .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 15px;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 9999;
-  }
-  
-  .navbar .logo {
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: #fff;
-  }
-  
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Background Gradient */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #1e3c72, #2a5298);
+  z-index: -1;
+}
+
+/* Countdown Container */
+.countdown-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  max-width: 90%;
+}
+
+.headline {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+/* Timer Blocks */
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.time-block {
+  font-size: 5rem;
+  font-weight: bold;
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.time-block span {
+  display: block;
+}
+
+.label {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+.separator {
+  font-size: 5rem;
+  font-weight: bold;
+  line-height: 1;
+  margin: 0 10px;
+}
+
+/* Celebration Popup */
+.celebration-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px 40px;
+  border-radius: 10px;
+  display: none;
+  z-index: 10;
+  text-align: center;
+}
+
+.celebration-popup h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.celebration-popup button {
+  padding: 10px 20px;
+  background: #ffdf00;
+  color: black;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.celebration-popup button:hover {
+  background: #ffd700;
+}
