@@ -49,7 +49,7 @@ const timer = setInterval(function () {
 
   if (distance < 0) {
     clearInterval(timer);
-    document.getElementById("timer").style.display = "none";  // Hide the countdown timer
+    document.getElementById("timer").innerHTML = "EXPIRED";
     document.getElementById("celebration-popup").style.display = "block"; // Show celebration popup
   }
 }, 1000);
@@ -58,6 +58,3 @@ const timer = setInterval(function () {
 document.getElementById("close-popup").addEventListener("click", function () {
   document.getElementById("celebration-popup").style.display = "none";
 });
-
-
-
