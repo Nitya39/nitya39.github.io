@@ -3,125 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Skyline Customs - Shop</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <title>New Year's Countdown</title>
     <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="shortcut icon"
-      href="https://i.imgur.com/cuQJC6A.jpeg"
-      type="image/x-icon"
-    />
-    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
   </head>
   <body>
+    <!-- Snow Container -->
+    <div id="snow"></div>
+
     <!-- Navbar -->
     <nav class="navbar">
-      <div class="logo">
-        <img src="skyline.jpg" alt="Skyline Customs Logo" />
-        Skyline Customs
-      </div>
-      <div class="nav-links">
-        <a href="/">Home</a>
-        <a href="/about">About Us</a>
-        <a href="#faq">FAQ</a>
-        <a href="https://discord.gg/skylinecustoms">Support</a>
-        <a href="/showcase">Showcase</a>
-        <a href="/pricing">Pricing</a>
-      </div>
-      <button class="cta">Get Started</button>
-      <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+      <div class="logo">New Year Countdown</div>
     </nav>
 
-    <main>
-      <h1>Our Shop</h1>
-
-      <!-- Stripe Buy Buttons -->
-      <stripe-buy-button
-        buy-button-id="buy_btn_1QaXhUJfLxlqZv4EATzqqWZr"
-        publishable-key="pk_live_51OMMUuJfLxlqZv4ExQgtNFyzxzTkBm89ngw5X6om1RhGGpeP6vTEvwbliysiEKB0LPmAfRyPC7FOwyddGlWliuHx00zcrsz8fS"
-      ></stripe-buy-button>
-
-      <stripe-buy-button
-        buy-button-id="buy_btn_1QaXfCJfLxlqZv4ELxlwnwjF"
-        publishable-key="pk_live_51OMMUuJfLxlqZv4ExQgtNFyzxzTkBm89ngw5X6om1RhGGpeP6vTEvwbliysiEKB0LPmAfRyPC7FOwyddGlWliuHx00zcrsz8fS"
-      ></stripe-buy-button>
-
-      <stripe-buy-button
-        buy-button-id="buy_btn_1QaXidJfLxlqZv4EWLZ4eFHw"
-        publishable-key="pk_live_51OMMUuJfLxlqZv4ExQgtNFyzxzTkBm89ngw5X6om1RhGGpeP6vTEvwbliysiEKB0LPmAfRyPC7FOwyddGlWliuHx00zcrsz8fS"
-      ></stripe-buy-button>
-
-      <stripe-buy-button
-        buy-button-id="buy_btn_1QaXjGJfLxlqZv4EzjB6tUUq"
-        publishable-key="pk_live_51OMMUuJfLxlqZv4ExQgtNFyzxzTkBm89ngw5X6om1RhGGpeP6vTEvwbliysiEKB0LPmAfRyPC7FOwyddGlWliuHx00zcrsz8fS"
-      ></stripe-buy-button>
-
-      <stripe-buy-button
-        buy-button-id="buy_btn_1QaXkwJfLxlqZv4EJfTBVp1S"
-        publishable-key="pk_live_51OMMUuJfLxlqZv4ExQgtNFyzxzTkBm89ngw5X6om1RhGGpeP6vTEvwbliysiEKB0LPmAfRyPC7FOwyddGlWliuHx00zcrsz8fS"
-      ></stripe-buy-button>
-
-      <stripe-buy-button
-        buy-button-id="buy_btn_1QaXlyJfLxlqZv4EbUhhR9A1"
-        publishable-key="pk_live_51OMMUuJfLxlqZv4ExQgtNFyzxzTkBm89ngw5X6om1RhGGpeP6vTEvwbliysiEKB0LPmAfRyPC7FOwyddGlWliuHx00zcrsz8fS"
-      ></stripe-buy-button>
-
-      <stripe-buy-button
-        buy-button-id="buy_btn_1QaXmjJfLxlqZv4EL2kQ8I6z"
-        publishable-key="pk_live_51OMMUuJfLxlqZv4ExQgtNFyzxzTkBm89ngw5X6om1RhGGpeP6vTEvwbliysiEKB0LPmAfRyPC7FOwyddGlWliuHx00zcrsz8fS"
-      ></stripe-buy-button>
-
-      <stripe-buy-button
-        buy-button-id="buy_btn_1QaXo5JfLxlqZv4EP8CjBBoP"
-        publishable-key="pk_live_51OMMUuJfLxlqZv4ExQgtNFyzxzTkBm89ngw5X6om1RhGGpeP6vTEvwbliysiEKB0LPmAfRyPC7FOwyddGlWliuHx00zcrsz8fS"
-      ></stripe-buy-button>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-section about">
-          <h3>Skyline Customs</h3>
-          <p>
-            We specialize in creating unique, elegant, and custom designs for
-            your personal and professional spaces.
-          </p>
-          <div class="socials">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-          </div>
-        </div>
-        <div class="footer-section links">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="https://discord.gg/skylinecustoms">Support</a></li>
-            <li><a href="/showcase">Showcase</a></li>
-            <li><a href="/pricing">Pricing</a></li>
-          </ul>
-        </div>
-        <div class="footer-section contact">
-          <h3>Contact Us</h3>
-          <p><i class="fas fa-phone"></i> +1 234 567 890</p>
-          <p><i class="fas fa-envelope"></i> info@skylinecustoms.com</p>
-          <p><i class="fas fa-map-marker-alt"></i> 123 Main Street, Cityville</p>
-        </div>
+    <!-- Countdown Section -->
+    <section class="countdown" id="countdown">
+      <h1>New Year's Countdown</h1>
+      <div id="timer">
+        <span id="days"></span> :
+        <span id="hours"></span> :
+        <span id="minutes"></span> :
+        <span id="seconds"></span>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 Skyline Customs. All Rights Reserved.</p>
-      </div>
-    </footer>
+    </section>
+
+    <!-- Celebration Popup -->
+    <div class="celebration-popup" id="celebration-popup">
+      <h1>🎉 Happy New Year! 🎉</h1>
+      <button id="close-popup">Close</button>
+    </div>
 
     <script src="script.js"></script>
   </body>
 </html>
+
 
