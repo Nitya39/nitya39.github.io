@@ -31,7 +31,7 @@ function createSnowflake() {
 setInterval(createSnowflake, 100);
 
 // Countdown Timer
-const countdownDate = new Date("Dec 31, 2024 01:27:00").getTime();
+const countdownDate = new Date("Jan 1, 2025 00:00:00").getTime();
 
 const timer = setInterval(function () {
   const now = new Date().getTime();
@@ -48,14 +48,14 @@ const timer = setInterval(function () {
   document.getElementById("seconds").innerHTML = seconds;
 
   if (distance < 0) {
-    clearInterval(timer); // Stop the countdown timer
-    document.getElementById("timer").innerHTML = "EXPIRED"; // Change the timer text
-    document.getElementById("countdown").style.display = "none"; // Hide the countdown section
+    clearInterval(timer);
+    document.getElementById("timer").innerHTML = "EXPIRED";
     document.getElementById("celebration-popup").style.display = "block"; // Show celebration popup
   }
 }, 1000);
 
 // Close popup functionality
 document.getElementById("close-popup").addEventListener("click", function () {
-  document.getElementById("celebration-popup").style.display = "none"; // Hide the popup when close is clicked
+  document.getElementById("celebration-popup").style.display = "none";
 });
+
