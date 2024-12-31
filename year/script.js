@@ -49,12 +49,8 @@ const timer = setInterval(function () {
 
   if (distance < 0) {
     clearInterval(timer);
-
-    // Remove the timer and show "EXPIRED"
-    document.getElementById("timer").style.display = "none";
-
-    // Show the celebration popup with the custom message
-    document.getElementById("celebration-popup").style.display = "block";
+    document.getElementById("timer").style.display = "none";  // Hide the countdown timer
+    document.getElementById("celebration-popup").style.display = "block"; // Show celebration popup
   }
 }, 1000);
 
@@ -62,5 +58,6 @@ const timer = setInterval(function () {
 document.getElementById("close-popup").addEventListener("click", function () {
   document.getElementById("celebration-popup").style.display = "none";
 });
+
 
 
