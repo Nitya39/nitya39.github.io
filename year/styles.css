@@ -105,17 +105,4 @@ body {
     font-weight: 600;
     color: #fff;
   }
-
-/* Custom Background Video */
-#background-video {
-  position: fixed;        /* Makes the video stay fixed while scrolling */
-  top: 0;                 /* Position the video at the top */
-  left: 0;                /* Position the video at the left */
-  width: 100%;            /* Make the video fill the entire width of the screen */
-  height: 100%;           /* Make the video fill the entire height of the screen */
-  object-fit: cover;      /* Ensure the video covers the whole screen area */
-  z-index: -1;            /* Ensure the video is behind other content */
-}
-
-
   
