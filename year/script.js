@@ -58,3 +58,4 @@ const timer = setInterval(function () {
 document.getElementById("close-popup").addEventListener("click", function () {
   document.getElementById("celebration-popup").style.display = "none";
 });
+
