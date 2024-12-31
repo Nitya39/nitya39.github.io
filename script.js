@@ -1,4 +1,11 @@
-// Snowfall Generation
+// Hamburger Menu Toggle
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
 const snowContainer = document.getElementById("snow");
 
 function createSnowflake() {
@@ -27,34 +34,44 @@ function createSnowflake() {
   }, (parseFloat(animationDuration) + parseFloat(animationDelay)) * 1000);
 }
 
-// Create snowflakes at intervals
 setInterval(createSnowflake, 100);
 
-// Countdown Timer
-const countdownDate = new Date("Jan 1, 2025 00:00:00").getTime();
+document.querySelectorAll(".faq-question").forEach((button) => {
+  button.addEventListener("click", () => {
+    const answer = button.nextElementSibling;
+    const toggle = button.querySelector(".faq-toggle");
 
-const timer = setInterval(function () {
-  const now = new Date().getTime();
-  const distance = countdownDate - now;
+    if (answer.style.display === "block") {
+      answer.style.display = "none";
+      toggle.textContent = "+";
+    } else {
+      answer.style.display = "block";
+      toggle.textContent = "-";
+    }
+  });
+});
 
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+const popup = document.getElementById("celebration-popup");
+const closePopup = document.getElementById("close-popup");
 
-  document.getElementById("days").innerHTML = days;
-  document.getElementById("hours").innerHTML = hours;
-  document.getElementById("minutes").innerHTML = minutes;
-  document.getElementById("seconds").innerHTML = seconds;
+const lastVisit = localStorage.getItem("lastVisit");
+const now = new Date().getTime();
+const oneDay = 24 * 60 * 60 * 1000;
 
-  if (distance < 0) {
-    clearInterval(timer);
-    document.getElementById("timer").innerHTML = "EXPIRED";
-    document.getElementById("celebration-popup").style.display = "block"; // Show celebration popup
-  }
-}, 1000);
+if (!lastVisit || now - lastVisit > oneDay) {
+  popup.classList.add("active");
+  localStorage.setItem("lastVisit", now);
+}
 
-// Close popup functionality
-document.getElementById("close-popup").addEventListener("click", function () {
-  document.getElementById("celebration-popup").style.display = "none";
+closePopup.addEventListener("click", () => {
+  popup.classList.remove("active");
+});
+
+document.querySelectorAll(".faq-header").forEach((header) => {
+  header.addEventListener("click", () => {
+    const card = header.parentElement;
+    card.classList.toggle("active");
+    const toggle = header.querySelector(".faq-toggle");
+    toggle.textContent = toggle.textContent === "+" ? "−" : "+";
+  });
 });
