@@ -106,27 +106,29 @@ body {
     color: #fff;
   }
   
-/* Back to Home Button */
+/* Back to Home Button (styled like CTA) */
 #back-to-home {
-  display: inline-block;
-  padding: 15px 30px;
-  background-color: #ffdf00;  /* Bright yellow background */
-  color: #000;  /* Black text */
-  font-size: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  background-color: #ffffff;  /* White background */
+  color: #000000;  /* Black text */
   font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1rem;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: inline-block;
   text-decoration: none;  /* Remove underline */
-  border-radius: 5px;
-  margin-top: 20px;  /* Space it from the elements above */
-  transition: background-color 0.3s, transform 0.3s;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);  /* Add some shadow */
 }
 
 #back-to-home:hover {
-  background-color: #ffcc00;  /* Darker yellow when hovered */
-  transform: scale(1.05);  /* Slightly increase size on hover */
+  background-color: #f0f0f0;  /* Slightly darker background on hover */
+  transform: translateY(-3px);  /* Slightly lift the button */
+  box-shadow: 0 5px 15px rgba(255, 165, 0, 0.5);  /* Light shadow to match CTA hover effect */
 }
 
 #back-to-home:active {
-  background-color: #ffaa00;  /* Even darker yellow when clicked */
-  transform: scale(1);  /* Reset size when clicked */
+  background-color: #d8d8d8;  /* Even darker background on click */
+  transform: translateY(0);  /* Reset size when clicked */
 }
