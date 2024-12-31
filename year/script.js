@@ -31,7 +31,7 @@ function createSnowflake() {
 setInterval(createSnowflake, 100);
 
 // Countdown Timer
-const countdownDate = new Date("Dec 31, 2024 01:50:00").getTime();
+const countdownDate = new Date("Dec 31, 2024 01:53:55").getTime();
 
 const timer = setInterval(function () {
   const now = new Date().getTime();
@@ -58,7 +58,7 @@ const timer = setInterval(function () {
     newYearMessage.id = "new-year-message";
     newYearMessage.innerHTML = `
       <h1>Happy New Year, Skyline Family!</h1>
-      <p>We wish you a Happy New Year!</p>
+      <p>We wish you a prosperous and joyful year ahead. Let’s make 2025 amazing together!</p>
     `;
     document.body.appendChild(newYearMessage);
   }
@@ -68,5 +68,3 @@ const timer = setInterval(function () {
 document.getElementById("close-popup").addEventListener("click", function () {
   document.getElementById("celebration-popup").style.display = "none";
 });
-
-
