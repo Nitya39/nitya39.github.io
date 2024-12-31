@@ -31,7 +31,7 @@ function createSnowflake() {
 setInterval(createSnowflake, 100);
 
 // Countdown Timer
-const countdownDate = new Date("Jan 1, 2025 00:00:00").getTime();
+const countdownDate = new Date("Dec 31, 2024 00:51:00").getTime();
 
 const timer = setInterval(function () {
   const now = new Date().getTime();
