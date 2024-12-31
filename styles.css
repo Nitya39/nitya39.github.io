@@ -1,108 +1,622 @@
-/* General Styles */
+/* Reset and Base Styles */
 body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-  }
-  
-  /* Snowfall Effect */
-  #snow {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    overflow: hidden;
-    z-index: 9999;
-  }
-  
-  .snowflake {
-    position: absolute;
-    top: -10px;
-    background-color: #ffffff;
-    border-radius: 50%;
-    opacity: 0.9;
-    pointer-events: none;
-    animation: fall linear infinite;
-  }
-  
-  @keyframes fall {
-    0% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(100vh);
-      opacity: 0;
-    }
-  }
-  
-  /* Countdown Styles */
-  .countdown {
-    margin-top: 20vh;
-    font-size: 3rem;
-    font-weight: 700;
-  }
-  
-  .countdown span {
-    padding: 20px;
-    background-color: #333;
-    border-radius: 10px;
-    margin: 5px;
-    font-size: 2.5rem;
-  }
-  
-  /* Celebration Popup */
-  .celebration-popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    border-radius: 10px;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #121212; /* Dark mode background */
+  color: #ffffff;
+}
+
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #000000; /* Pure black background */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
+}
+
+/* Logo Styling */
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.navbar .logo:hover {
+  transform: scale(1.1);
+  text-shadow: 0 0 8px #ffffff;
+}
+
+.navbar .logo img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+}
+
+/* Navbar Links Container */
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Link Styling */
+.nav-links a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: #f0f0f0;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: #ffffff;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* CTA Button */
+.cta {
+  padding: 0.5rem 1.5rem;
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.cta:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-3px);
+}
+
+/* Hamburger Menu (Mobile) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Responsive Navbar */
+@media screen and (max-width: 768px) {
+  .nav-links {
     display: none;
-    z-index: 10000;
+    flex-direction: column;
+    background-color: #000000;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    gap: 1rem;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
   }
-  
-  .celebration-popup h1 {
-    color: #ffdf00;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+
+  .nav-links.active {
+    display: flex;
   }
-  
-  .celebration-popup button {
-    padding: 10px 20px;
-    background-color: #ffdf00;
-    color: #000;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    cursor: pointer;
+
+  .hamburger {
+    display: flex;
   }
-  
-  .celebration-popup button:hover {
-    background-color: #ffcc00;
+}
+
+/* Hero Section Styles */
+.hero {
+  margin-top: -100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left; /* Ensure text aligns left */
+  height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("background.jpg") no-repeat center center/cover; /* Replace 'background.jpg' if needed */
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem; /* Spacing between text and image */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-text {
+  flex: 1; /* Take up half the available space */
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  color: #e0e0e0;
+  animation: fadeInUp 1.8s ease-in-out;
+}
+
+.hero-cta {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #000000;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  animation: fadeInUp 2s ease-in-out;
+}
+
+.hero-cta:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-5px);
+}
+
+.hero-image {
+  flex: 1; /* Take up the other half of the space */
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero-image img {
+  width: 100%; /* Responsive image scaling */
+  max-width: 500px; /* Limit the size of the image */
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Falling Snow */
+#snow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.snowflake {
+  position: absolute;
+  top: -10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  opacity: 0.9;
+  pointer-events: none;
+  animation: fall linear infinite;
+}
+
+/* Snowflake Animation */
+@keyframes fall {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
-  /* Navbar */
-  .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 15px;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 9999;
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
   }
-  
-  .navbar .logo {
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: #fff;
+}
+
+/* Celebration Popup */
+.celebration-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+
+.celebration-popup.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup-content {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  animation: popup-bounce 0.6s ease-in-out;
+}
+
+.popup-content h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.popup-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.popup-content button {
+  padding: 0.5rem 2rem;
+  background: #ffffff;
+  color: #333333;
+  border: none;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.popup-content button:hover {
+  transform: scale(1.05);
+}
+
+@keyframes popup-bounce {
+  0% {
+    transform: scale(0.9);
   }
-  
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* FAQ Section Styles */
+.faq {
+  padding: 2rem;
+  background-color: #181818;
+  color: #ffffff;
+  text-align: center;
+}
+
+.faq h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px white;
+}
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-card {
+  background: #222222;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faq-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+}
+
+.faq-header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background: black;
+}
+
+.faq-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.faq-toggle {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.faq-answer {
+  display: none;
+  padding: 1rem;
+  background: #333333;
+  color: #e0e0e0;
+  font-size: 1rem;
+  border-top: 1px solid #444444;
+  text-align: start;
+}
+
+/* FAQ Active State */
+.faq-card.active .faq-answer {
+  display: block;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 2rem 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-section p,
+.footer-section ul {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-section ul li a:hover {
+  color: #f0f0f0;
+}
+
+.socials {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.socials a {
+  font-size: 1.2rem;
+  color: #ffffff;
+  transition: color 0.3s ease-in-out;
+}
+
+.socials a:hover {
+  color: #f0f0f0;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes growIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Hero Section Animation */
+.hero-content {
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+.hero h1 {
+  animation: fadeIn 1.2s ease-in-out 0.3s;
+}
+
+.hero p {
+  animation: fadeInUp 1.5s ease-in-out 0.6s;
+}
+
+.hero-cta {
+  animation: growIn 1.5s ease-in-out 0.9s;
+}
+
+/* Navbar Animation */
+.navbar {
+  animation: slideIn 1s ease-in-out;
+}
+
+/* Celebration Popup Animation */
+.celebration-popup .popup-content {
+  animation: bounceIn 1.5s ease-in-out;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* FAQ Section Animations */
+.faq {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.faq-container {
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+.faq-card {
+  animation: fadeInUp 1.2s ease-in-out;
+}
+
+/* Footer Section Animation */
+.footer-content {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.footer-section h3 {
+  animation: slideIn 1s ease-in-out;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section a {
+  animation: fadeInUp 1.2s ease-in-out;
+}
+
+/* Hover Effects for Footer Links */
+.footer-section ul li a:hover {
+  color: #f0a500;
+  text-shadow: 0 0 8px #f0a500;
+}
+
+/* Navbar Hover Animation */
+.nav-links a:hover {
+  color: #f0a500;
+  text-shadow: 0 0 10px #f0a500;
+}
+
+/* Button Hover Animation */
+.cta:hover,
+.hero-cta:hover,
+.popup-content button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(255, 165, 0, 0.5);
+}
+
+/* FAQ Header Hover */
+.faq-header:hover {
+  background: linear-gradient(135deg, #feb47b, #ff7e5f);
+  color: #ffffff;
+}
+
+/* FAQ Toggle Animation */
+.faq-card.active .faq-toggle {
+  transform: rotate(45deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Footer Bottom Hover */
+.footer-bottom p:hover {
+  color: #f0a500;
+  text-shadow: 0 0 5px #f0a500;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Smooth Snowflake Animation */
+.snowflake {
+  animation: fall linear infinite, fadeIn 3s ease-in-out;
+}
