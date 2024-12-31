@@ -1,159 +1,111 @@
-/* Reset and Base Styles */
+/* General Styles */
 body {
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-  background-color: #121212;
-  color: #ffffff;
-}
-
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: #000000;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
-}
-
-/* Logo Styling */
-.navbar .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #ffffff;
-  text-transform: uppercase;
-  cursor: pointer;
-  letter-spacing: 2px;
-}
-
-/* Countdown Section */
-.countdown {
-  text-align: center;
-  padding: 2rem;
-  background: rgba(0, 0, 0, 0.7);
-  margin-top: 50px;
-  border-radius: 10px;
-}
-
-#timer {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #ffffff;
-}
-
-/* Back to Home Button */
-#back-to-home {
-  padding: 0.75rem 2rem;
-  background-color: #ffffff;
-  color: #000000;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 1rem;
-  border-radius: 30px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  display: inline-block;
-  text-decoration: none;  /* Remove underline */
-  margin: 20px auto;
-}
-
-#back-to-home:hover {
-  background-color: #f0f0f0;
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(255, 165, 0, 0.5);
-}
-
-#back-to-home:active {
-  background-color: #d8d8d8;
-  transform: translateY(0);
-}
-
-/* Celebration Popup */
-.celebration-popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10000;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.5s ease;
-}
-
-.celebration-popup.active {
-  opacity: 1;
-  visibility: visible;
-}
-
-.popup-content {
-  background: linear-gradient(135deg, #ff7e5f, #feb47b);
-  padding: 2rem;
-  border-radius: 15px;
-  text-align: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  color: #ffffff;
-}
-
-.popup-content h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.popup-content button {
-  padding: 0.5rem 2rem;
-  background: #ffffff;
-  color: #333333;
-  border: none;
-  font-size: 1rem;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-.popup-content button:hover {
-  transform: scale(1.05);
-}
-
-/* Snowflake Effect */
-#snow {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 2;
-}
-
-.snowflake {
-  position: absolute;
-  top: -10px;
-  background-color: #ffffff;
-  border-radius: 50%;
-  opacity: 0.9;
-  pointer-events: none;
-  animation: fall linear infinite;
-}
-
-@keyframes fall {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
   }
-  100% {
-    transform: translateY(100vh);
-    opacity: 0;
+  
+  /* Snowfall Effect */
+  #snow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 9999;
   }
-}
+  
+  .snowflake {
+    position: absolute;
+    top: -10px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    opacity: 0.9;
+    pointer-events: none;
+    animation: fall linear infinite;
+  }
+  
+  @keyframes fall {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh);
+      opacity: 0;
+    }
+  }
+  
+  /* Countdown Styles */
+  .countdown {
+    margin-top: 20vh;
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  
+  .countdown span {
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    margin: 5px;
+    font-size: 2.5rem;
+  }
+  
+  /* Celebration Popup */
+  .celebration-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+    z-index: 10000;
+  }
+  
+  .celebration-popup h1 {
+    color: #ffdf00;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .celebration-popup button {
+    padding: 10px 20px;
+    background-color: #ffdf00;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  .celebration-popup button:hover {
+    background-color: #ffcc00;
+  }
+  
+  /* Navbar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+  }
+  
+  .navbar .logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #fff;
+  }
+  
 
 /* Reset and Base Styles */
 body {
@@ -422,3 +374,4 @@ body {
     font-size: 0.8rem;
   }
   
+
