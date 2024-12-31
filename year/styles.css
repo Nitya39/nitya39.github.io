@@ -89,43 +89,177 @@ body {
   background-color: #ffcc00;
 }
 
-/* Navbar */
+Navbar
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 15px;
+  padding: 15px 30px; /* Adds some horizontal spacing */
   background: rgba(0, 0, 0, 0.8);
   z-index: 9999;
+  display: flex; /* Flexbox for alignment */
+  justify-content: space-between; /* Space between logo and button */
+  align-items: center; /* Vertical centering */
 }
 
-.navbar .logo {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: #fff;
-}
-
-/* General button styling */
-.cta {
-  position: fixed; /* Fixes the button position */
-  bottom: 150px; /* Positions it 20px above the bottom of the page */
-  left: 50%; /* Centers the button horizontally */
-  transform: translateX(-50%); /* Adjusts for the button's width */
+/* General button styling inside the navbar */
+.navbar .cta {
   background-color: #FFFFFF; /* Button background color */
   color: BLACK; /* Button text color */
   border: none; /* Removes border */
-  padding: 15px 30px; /* Adds padding for better appearance */
-  font-size: 1.2rem; /* Adjusts font size */
+  padding: 10px 20px; /* Adjusts padding for smaller button */
+  font-size: 1rem; /* Adjusts font size */
   font-family: Arial, sans-serif;
   border-radius: 8px; /* Rounded corners */
-  cursor: pointer; /* Changes cursor to pointer on hover */
+  cursor: pointer; /* Pointer cursor on hover */
   text-transform: uppercase; /* Makes text uppercase */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
   transition: background-color 0.3s ease; /* Smooth hover effect */
 }
 
-/* Hover effect */
-.cta:hover {
-  background-color: #FFFFFF; /* Darker blue on hover */
+/* Button hover effect */
+.navbar .cta:hover {
+  background-color: #f0f0f0; /* Slightly darker background for hover */
 }
+
+/* Optional: Add a focus style for accessibility */
+.navbar .cta:focus {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
+
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #000000; /* Pure black background */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
+}
+
+/* Logo Styling */
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.navbar .logo:hover {
+  transform: scale(1.1);
+  text-shadow: 0 0 8px #ffffff;
+}
+
+.navbar .logo img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+}
+
+/* Navbar Links Container */
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Link Styling */
+.nav-links a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: #f0f0f0;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: #ffffff;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* CTA Button */
+.cta {
+  padding: 0.5rem 1.5rem;
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.cta:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-3px);
+}
+
+/* Hamburger Menu (Mobile) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Responsive Navbar */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #000000;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    gap: 1rem;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
