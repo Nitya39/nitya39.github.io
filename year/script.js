@@ -49,8 +49,18 @@ const timer = setInterval(function () {
 
   if (distance < 0) {
     clearInterval(timer);
-    document.getElementById("timer").innerHTML = "EXPIRED";
-    document.getElementById("celebration-popup").style.display = "block"; // Show celebration popup
+
+    // Hide the timer
+    document.getElementById("timer").style.display = "none";
+
+    // Replace with the New Year message
+    const newYearMessage = document.createElement("div");
+    newYearMessage.id = "new-year-message";
+    newYearMessage.innerHTML = `
+      <h1>Happy New Year, Skyline Family!</h1>
+      <p>We wish you a Happy New Year!</p>
+    `;
+    document.body.appendChild(newYearMessage);
   }
 }, 1000);
 
@@ -58,4 +68,5 @@ const timer = setInterval(function () {
 document.getElementById("close-popup").addEventListener("click", function () {
   document.getElementById("celebration-popup").style.display = "none";
 });
+
 
