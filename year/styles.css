@@ -109,7 +109,7 @@ body {
 /* General button styling */
 .cta {
   position: fixed; /* Fixes the button position */
-  bottom: 250px; /* Positions it 20px above the bottom of the page */
+  bottom: 150px; /* Positions it 20px above the bottom of the page */
   left: 50%; /* Centers the button horizontally */
   transform: translateX(-50%); /* Adjusts for the button's width */
   background-color: #FFFFFF; /* Button background color */
