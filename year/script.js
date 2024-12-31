@@ -48,14 +48,14 @@ const timer = setInterval(function () {
   document.getElementById("seconds").innerHTML = seconds;
 
   if (distance < 0) {
-    clearInterval(timer);
-    document.getElementById("timer").innerHTML = "EXPIRED";
+    clearInterval(timer); // Stop the countdown timer
+    document.getElementById("timer").innerHTML = "EXPIRED"; // Change the timer text
+    document.getElementById("countdown").style.display = "none"; // Hide the countdown section
     document.getElementById("celebration-popup").style.display = "block"; // Show celebration popup
   }
 }, 1000);
 
 // Close popup functionality
 document.getElementById("close-popup").addEventListener("click", function () {
-  document.getElementById("celebration-popup").style.display = "none";
+  document.getElementById("celebration-popup").style.display = "none"; // Hide the popup when close is clicked
 });
-
