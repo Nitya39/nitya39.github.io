@@ -7,24 +7,34 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- Snow Container -->
-    <div id="snow"></div>
+    <!-- Gradient Background -->
+    <div class="background"></div>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-      <div class="logo">New Year Countdown</div>
-    </nav>
-
-    <!-- Countdown Section -->
-    <section class="countdown" id="countdown">
-      <h1>New Year's Countdown</h1>
-      <div id="timer">
-        <span id="days"></span> :
-        <span id="hours"></span> :
-        <span id="minutes"></span> :
-        <span id="seconds"></span>
+    <!-- Countdown Timer Section -->
+    <div class="countdown-container">
+      <h1 class="headline">New Year Countdown</h1>
+      <div class="timer">
+        <div class="time-block">
+          <span id="days">00</span>
+          <span class="label">Days</span>
+        </div>
+        <div class="separator">:</div>
+        <div class="time-block">
+          <span id="hours">00</span>
+          <span class="label">Hours</span>
+        </div>
+        <div class="separator">:</div>
+        <div class="time-block">
+          <span id="minutes">00</span>
+          <span class="label">Minutes</span>
+        </div>
+        <div class="separator">:</div>
+        <div class="time-block">
+          <span id="seconds">00</span>
+          <span class="label">Seconds</span>
+        </div>
       </div>
-    </section>
+    </div>
 
     <!-- Celebration Popup -->
     <div class="celebration-popup" id="celebration-popup">
