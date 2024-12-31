@@ -1,118 +1,108 @@
 /* General Styles */
 body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #fff;
-  text-align: center;
-  overflow: hidden; /* Prevent scrolling */
-}
-
-/* Custom Background Video */
-#background-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Cover the entire viewport */
-  z-index: -1; /* Behind other content */
-}
-
-/* Snowfall Effect */
-#snow {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 9999;
-}
-
-.snowflake {
-  position: absolute;
-  top: -10px;
-  background-color: #ffffff;
-  border-radius: 50%;
-  opacity: 0.9;
-  pointer-events: none;
-  animation: fall linear infinite;
-}
-
-@keyframes fall {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
   }
-  100% {
-    transform: translateY(100vh);
-    opacity: 0;
+  
+  /* Snowfall Effect */
+  #snow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 9999;
   }
-}
-
-/* Countdown Styles */
-.countdown {
-  margin-top: 20vh;
-  font-size: 3rem;
-  font-weight: 700;
-}
-
-.countdown span {
-  padding: 20px;
-  background-color: #333;
-  border-radius: 10px;
-  margin: 5px;
-  font-size: 2.5rem;
-}
-
-/* Celebration Popup */
-.celebration-popup {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.8);
-  padding: 20px;
-  border-radius: 10px;
-  display: none;
-  z-index: 10000;
-}
-
-.celebration-popup h1 {
-  color: #ffdf00;
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.celebration-popup button {
-  padding: 10px 20px;
-  background-color: #ffdf00;
-  color: #000;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-
-.celebration-popup button:hover {
-  background-color: #ffcc00;
-}
-
-/* Navbar */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 15px;
-  background: rgba(0, 0, 0, 0.8);
-  z-index: 9999;
-}
-
-.navbar .logo {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: #fff;
-}
+  
+  .snowflake {
+    position: absolute;
+    top: -10px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    opacity: 0.9;
+    pointer-events: none;
+    animation: fall linear infinite;
+  }
+  
+  @keyframes fall {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh);
+      opacity: 0;
+    }
+  }
+  
+  /* Countdown Styles */
+  .countdown {
+    margin-top: 20vh;
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  
+  .countdown span {
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    margin: 5px;
+    font-size: 2.5rem;
+  }
+  
+  /* Celebration Popup */
+  .celebration-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+    z-index: 10000;
+  }
+  
+  .celebration-popup h1 {
+    color: #ffdf00;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .celebration-popup button {
+    padding: 10px 20px;
+    background-color: #ffdf00;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  .celebration-popup button:hover {
+    background-color: #ffcc00;
+  }
+  
+  /* Navbar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+  }
+  
+  .navbar .logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #fff;
+  }
+  
